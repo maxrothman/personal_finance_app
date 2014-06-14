@@ -43,8 +43,6 @@ You're ready to go!
 $ dev_appserver.py .
 ```
 
- Since login is required, you first have to go to localhost:8080/_ah/login to login as a fake administrator.
-
 - To deploy the app, run:
 
  ```bash
@@ -61,6 +59,6 @@ $ deactivate
 #Notes:
 - If you add any more packages to the project (via pip), be sure to run this command:
 
-```bash
+ ```bash
 $ linkenv env/lib/python2.7/site-packages lib
 ```
