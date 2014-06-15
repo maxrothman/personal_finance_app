@@ -19,6 +19,7 @@
  - nonexclusive label ("tag") (nested)
  - free-form single-line text
  - free-form multiline text
+- Hide/show columns in UI
 
 <br>
 ###Transaction Processing
