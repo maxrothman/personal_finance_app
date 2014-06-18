@@ -30,6 +30,7 @@
  - Option to try automatic filtering but still require human approval
 - Eventually, machine learning for automatic processing
 - Option to notify another user to process a transaction (e.g. "What's this?")
+- Maybe "multiple buckets" idea can be generalized for any number of user-defined groups? Use case?
 
 <br>
 ###Reports/Visualization
