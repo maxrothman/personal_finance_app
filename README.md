@@ -57,8 +57,9 @@ $ deactivate
 ```
 
 #Notes:
-- If you add any more packages to the project (via pip), be sure to run this command:
+- If you add any more packages to the project (via pip), be sure to run these commands:
 
  ```bash
+$ virtualenv --relocatable venv
 $ linkenv env/lib/python2.7/site-packages lib
 ```
