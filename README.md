@@ -12,7 +12,7 @@ _Budget your way_
    ```bash
 $ sudo easy_install pip
 ```
-
+- [Install the Google Cloud SDK](https://developers.google.com/cloud/sdk/)
 - If you do not already have it, install virtualenv. This is preferable so that you don't muck up your existing environment.
 
    ```bash
@@ -33,7 +33,6 @@ $ source venv/bin/activate
    ```
 $ venv\scripts\activate
 ```
-- [Install the Google Cloud SDK](https://developers.google.com/cloud/sdk/)
 
 You're ready to go!
 
