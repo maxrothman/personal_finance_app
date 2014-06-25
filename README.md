@@ -33,6 +33,7 @@ $ source venv/bin/activate
    ```
 $ venv\scripts\activate
 ```
+- [Install the Google Cloud SDK](https://developers.google.com/cloud/sdk/)
 
 You're ready to go!
 
