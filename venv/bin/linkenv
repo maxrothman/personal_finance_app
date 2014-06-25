@@ -1,4 +1,4 @@
-#!/Users/maxrothman/personal_finance_app/venv/bin/python
+#!/other/personal_finance_app/venv/bin/python2.7
 # EASY-INSTALL-ENTRY-SCRIPT: 'linkenv==0.1.0','console_scripts','linkenv'
 __requires__ = 'linkenv==0.1.0'
 import sys
