@@ -2,7 +2,47 @@
 
 from google.appengine.ext import ndb
 from google.appengine.api import memcache
+from google.appengine.api import search
 import functools, time
+
+
+
+class Schema(ndb.Model):
+  '''A collection of columns.
+  Should always have a TransactionGroup as an ancestor.'''
+  columns = ndb.StructuredProperty(Column, repeated=True, required=True)
+
+
+class Column(ndb.Model):
+  '''A column of data attached to transactions'''
+  name = ndb.StringProperty(required=True)
+  kind = ndb.StringProperty(required=True, choices=column_types.keys())
+  validator = ndb.ComputedProperty(lambda self: column_types[self.kind])
+
+
+def date_validator(val):
+  pass
+
+def amount_validator(val):
+  pass
+
+def category_validator(val):
+  pass
+
+def tag_validator(val):
+  pass
+
+def text_validator(val):
+  pass
+
+column_types = {
+  'date': date_validator,
+  'amount': amount_validator,
+  'category': category_validator,
+  'tag': tag_validator,
+  'text': text_validator
+}
+
 
 @ndb.transactional
 def index_ndb_transactional(doc_id, timeout=1):
@@ -43,14 +83,6 @@ def index_ndb_transactional(doc_id, timeout=1):
         #log
         continue
         #TODO: add wait?
-
-      #client = memcache.Client()
-      # while True:
-      #   lock = client.gets(key)
-      #   if lock:
-      #     continue
-      #   elif client.cas(key, 'arbitrary payload')
-      #     break
 
       try:
         func(*args, **kwargs)
